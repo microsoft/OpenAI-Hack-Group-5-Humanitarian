@@ -88,6 +88,9 @@ The C# solution is using the following.
 <br />
 
 ## Technical Details
+
+Technical deals of each individual solution are contained in the readme files in the folders [Python](https://github.com/microsoft/OpenAI-Hack-Group-5-Humanitarian/tree/main/Python) and [C#](https://github.com/microsoft/OpenAI-Hack-Group-5-Humanitarian/tree/main/C%23).
+
 <br />
 
 ### Technical Challenges
