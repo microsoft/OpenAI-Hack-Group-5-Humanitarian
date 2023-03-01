@@ -32,14 +32,17 @@ Our team built two different solutions, one based on Python and the other on C#.
 
 At a very high level this is a tool to replace visualizations for PowerBI with text summaries enabling visually impaired and mobile users.  This extends further as users are also able to simply ask additional questions of the data.
 
+As this code is easily called by serverless services such as Azure Functions or Logic Apps, our code is very extensible and easily embedded behind web apps or chat bots or by referencing voice captured through telephony solutions.  While our solutions would both require some modification by customers prior to implementation, this technological lift should be small.
+
+The output however is a fully accessible replacement to PowerBI visualizations and "Ask a question of the data" functionality for both visually impaired as well as mobile or remote scenarios.
+
 <br />
 <br />
 <br />
 
 ## How to Replicate the solution
 
-This use case not unique to nonprofit or the WHO.  These ML models will ingest data and allow for text summarization and user Q&A functionality regardless of industry.  There are certain limitations due to data size, however our data scientists did provide recommendations and sample code for extensions.  
-
+This use case not unique to nonprofit or the WHO.  These ML models will ingest data and allow for text summarization and user Q&A functionality regardless of industry.  There are certain limitations due to data size, however our data scientists did provide recommendations and sample code for extensions.  This will be further discussed in the technical details below.
 
 <br />
 <br />
@@ -48,7 +51,13 @@ This use case not unique to nonprofit or the WHO.  These ML models will ingest d
 ## Demos
 
 <br />
+
+![Python Demo](https://github.com/microsoft/OpenAI-Hack-Group-5-Humanitarian/blob/main/Demos/Python%20Demo%20Final.mp4)
+
 <br />
+
+![C# Demo](https://github.com/microsoft/OpenAI-Hack-Group-5-Humanitarian/blob/main/Demos/C%23%20Demo%20Final.mov)
+
 <br />
 
 ## Cost Considerations
