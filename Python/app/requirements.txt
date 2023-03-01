@@ -1,0 +1,10 @@
+langchain
+openai
+gTTS
+ffmpeg-python
+whisper
+streamlit
+pandas
+numpy 
+scipy
+htbuilder
