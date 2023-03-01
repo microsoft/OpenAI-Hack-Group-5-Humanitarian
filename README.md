@@ -80,7 +80,7 @@ The C# solution is using the following.
     Azure App Services - This could be used to host a front end web app.  However this is not a requirement.
     Azure OpenAI Services
  
- Most of these services have a free tier, so development of this technology should be relatively cheap for customers.  Once this solution is in production, the cost of all of these services are based on the number of calls to the system.  OpenAI for example can be expensive.
+ Most of these services have a free tier, so development of this technology should be relatively cheap for customers.  Once this solution is in production, the cost of all of these services are based on the number of calls to the system.  Most of the calls to cognitive services are just a few cents per API call, so the cost of Azure would likely be derived more from the Azure infrastructure to support integration between this summarization engine and the front end appliation.
  
   
 <br />
@@ -103,24 +103,14 @@ We had success with each of these methods but with the result of limiting the ov
 
 ### Future Enhancements
 
+Our team did explore different solutions to this token and data limitation of GPT.  One solution would be allowing the model to be trained on the external data sets. Likely this would require additional data preparation such as creating sentences out of column data. 
+
+The other option would be to pre-analyze the data.  In the future enhancements section of this repository, we have included a notebook that would take a numerical data set and extract "interesting" features.  These extracted features would then be useful to provide as parameters to the GPT calls and facilitate data set summarization to fulfill the requirements of this challange with larger data sets.  
+
+The drawback to this method is that "interesting features" of the data may be different depending on the type of data being analyzed.  So additional data science work may be required to provide accurate preprocessing for summarization.
 <br />
 <br />
 <br />
-
-
-
-
-
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
-
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
-
 
 
 ## Contributing
