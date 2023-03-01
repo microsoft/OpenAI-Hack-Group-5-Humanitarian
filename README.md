@@ -112,6 +112,9 @@ The other option would be to pre-analyze the data.  In the future enhancements s
 
 The drawback to this method is that "interesting features" of the data may be different depending on the type of data being analyzed.  So additional data science work may be required to provide accurate preprocessing for summarization.
 <br />
+
+Additionally to assist with data engineering and data prep, we did include a sample data pipeline that can extract data from API endpoint and format this in suitable CSV format for preprocessing and tokenization for GTP processing of smaller datasets.
+
 <br />
 <br />
 
