@@ -1,0 +1,10 @@
+===RESULTS
+{{$results}}
+===END RESULTS
+
+If you don't know, say I don't know.
+Answer in full sentences.
+Use the [RESULTS] to answer the following query:
+
+Query: {{$input}}
+Answer:
