@@ -1,6 +1,6 @@
 # WHO/WHDH Chart Data Text Summarization - Extracting Insights from Data for Visually Impaired
 
-WHO's World Health Data Hub(WHDH) provides an interactive digital platform and trusted source for global health data, fulfilling WHO’s commitment to provide health data as a public good. The platform brings together an ambitious product stack to deliver an end-to-end solution for WHO data processes. From collection to use the platform provides a world class experience leveraging innovative technology to address challenges and pain points.
+[WHO's World Health Data Hub(WHDH)](https://data.who.int/home) provides an interactive digital platform and trusted source for global health data, fulfilling WHO’s commitment to provide health data as a public good. The platform brings together an ambitious product stack to deliver an end-to-end solution for WHO data processes. From collection to use the platform provides a world class experience leveraging innovative technology to address challenges and pain points.
 
 ![WHO WHDH](https://github.com/microsoft/OpenAI-Hack-Group-5-Humanitarian/blob/main/Images/WHO%20WHDH%20Screen%20Shot.png)
 
@@ -62,6 +62,27 @@ This use case not unique to nonprofit or the WHO.  These ML models will ingest d
 
 ## Cost Considerations
 
+For both solutions, cost for our customers was a consideration.
+
+The Python solution is currently using the following technology.
+
+    Whisperlite Python Library - this is $0.006/minute
+    Azure Function - to execute the Python code
+    Azure Storage - to facilitate data movement
+    Azure App Services - This could be used to host a front end web app.  However this is not a requirement.
+    Azure OpenAI Services
+
+The C# solution is using the following.
+
+    Azure Cognitive Services - This is currently on free tier pricing.
+    Azure Function or Logic Apps - To execute the C#
+    Azure Storage - To facilitate data movement
+    Azure App Services - This could be used to host a front end web app.  However this is not a requirement.
+    Azure OpenAI Services
+ 
+ Most of these services have a free tier, so development of this technology should be relatively cheap for customers.  Once this solution is in production, the cost of all of these services are based on the number of calls to the system.  OpenAI for example can be expensive.
+ 
+  
 <br />
 <br />
 <br />
@@ -71,6 +92,13 @@ This use case not unique to nonprofit or the WHO.  These ML models will ingest d
 
 ### Technical Challenges
 
+The biggest technical challange with this solution was in using OpenAI services for the generation of the data summary.  GPT is great at document summaries and great at language and conversation understanding, however most of this data is column data in the simplest form.  
+
+In our initial testing, we were simiply asking for a summary or asking specific questions of the data, and specifying the WHO URL for the intended data set.  Surprisingly this generated excellent outputs.  Unfortunately when we examined the numerical output, the values did not corrospond to the current data in the visualizatoins.  Upon review of the models, it would appear that the answers were being genereated from GPT itself, and that either it had been trained on this WHO data or on data that contained similar infomration and that the data was simply old.  The result being that we could use GPT directly if we did not need 100% factual or more likely, up to date data.
+
+Our goal then became to force the models to use the document provided and not the pretrained data in the model itself.  We attempted this in a few different ways.  We experimented with taking each row of columns and turning it into a sentence, and then passing that into the model as a parameter.  We also tried a couple different approaches of passing the values directly in as parameters.
+
+We had success with each of these methods but with the result of limiting the overall data set sizes that can be utilized in this way.  Essentially you will run out of tokens to pass data and will be limited in the number of rows.  This limitation will be addressed in the future enhancements for this project.
 <br />
 
 ### Future Enhancements
