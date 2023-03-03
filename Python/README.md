@@ -42,6 +42,8 @@ These embeddings can be stored as indexed vectorstore. For question-answering, w
     - app.py: app which takes input from mic, uses a small training set and outputs audio.
     - app_nomic.py: modification of app.py that runs remotely. Streamlit by default runs on a non-https port, when run remotely, most browsers block mic access if not running https. So in this version, the question has to be entered as text.
     - app_embed.py: extension of app_nomic.py that uses embeddings. This is trained on the 2019 WHO child mortality data for all countries. The app supports questions and basic reasoning over all the data.
+* requirments.txt: lists all the libraries needed to run this code. Recommend running with Python 3.9 in a Conda environment.
+
 
 ## Usage Costs
 * Speech-to-Text API: `whisper` $0.006 / min (rounded to nearest second)
