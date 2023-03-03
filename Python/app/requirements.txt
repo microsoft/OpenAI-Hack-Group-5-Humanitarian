@@ -1,4 +1,4 @@
-langchain
+langchain==0.0.76
 openai
 gTTS
 ffmpeg-python
@@ -8,3 +8,6 @@ pandas
 numpy 
 scipy
 htbuilder
+faiss-cpu
+sentence-transformers
+InstructEmbedding
