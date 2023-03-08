@@ -22,6 +22,7 @@ from langchain.llms import OpenAI
 from gtts import gTTS
 
 os.environ["OPENAI_API_KEY"] = "<your-api-key>"
+
 model = whisper.load_model("base")
 df = pd.read_csv('../mortality_data.csv')
 # concatenate values from first 5 rows of column 'text'

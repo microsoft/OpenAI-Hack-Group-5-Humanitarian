@@ -11,3 +11,4 @@ htbuilder
 faiss-cpu
 sentence-transformers
 InstructEmbedding
+googletrans==3.1.0a0
