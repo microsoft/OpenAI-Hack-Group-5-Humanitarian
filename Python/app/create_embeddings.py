@@ -8,7 +8,7 @@ from langchain.embeddings import HuggingFaceInstructEmbeddings
 import pickle
 import os
 
-os.environ["OPENAI_API_KEY"] = "<your-api-key>"
+#os.environ["OPENAI_API_KEY"] = "<your-api-key>"
 
 # Here we load in the data in the format that Notion exports it in.
 md_dir = "/home/azureuser/OpenAI-Hack-Group-5-Humanitarian/Python/app/"
