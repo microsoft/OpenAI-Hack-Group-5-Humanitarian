@@ -1,4 +1,4 @@
-langchain==0.0.76
+langchain==0.0.236
 openai
 gTTS
 ffmpeg-python
