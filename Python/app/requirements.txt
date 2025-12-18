@@ -10,4 +10,4 @@ scipy
 htbuilder
 faiss-cpu
 sentence-transformers
-InstructEmbedding
+InstructorEmbedding
